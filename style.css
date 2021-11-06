@@ -19,7 +19,7 @@ body{
 .slider{
     position: relative;
     width: 800px;
-    height: 500px;
+    min-height: 500px;
     margin: 20px;
     overflow: hidden;
     border-radius: 10px;
@@ -55,4 +55,51 @@ body{
 .slider .slide .content p{
     font-weight: 400;
     margin-top: 10px;
+}
+
+.navigation{
+    height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    opacity: 0;
+    transition: 0.3s ease;
+}
+
+.slider .navigation:hover{
+    opacity: 1;
+}
+
+.prev-btn, .next-btn{
+    font-size: 2em;
+    z-index: 999;
+    background-color: rgba(238, 237, 237, 0.8);
+    padding: 8px;
+    cursor: pointer;
+}
+.prev-btn{
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+}
+.next-btn{
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+}
+
+.navigation-visibility{
+    z-index: 999;
+    display: flex;
+    justify-content: center;
+}
+
+.navigation-visibility .slide-icon{
+    z-index: 999;
+    background: rgba(255, 255, 255, 0.5);
+    width: 20px;
+    height: 10px;
+    margin: 0 6px;
+    border-radius: 2px;
+    transform: translateY(-20px);
+    cursor: pointer;
+    transition: 0.3s ease;
 }
